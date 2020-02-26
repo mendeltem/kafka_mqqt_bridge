@@ -1,0 +1,59 @@
+confluent local start connect
+
+curl -s -X POST -H 'Content-Type: application/json' http://localhost:8083/connectors -d '{
+    "name" : "mqtt-source",
+"config" : {
+    "connector.class" : "io.confluent.connect.mqtt.MqttSourceConnector",
+    "tasks.max" : "1",
+    "mqtt.server.uri" : "tcp://127.0.0.1:1883",
+    "mqtt.topics" : "SIMULATOR1-8A12-4F4F-8F69-6B8F3C2E78DD",
+    "kafka.topic" : "mqtt.SIMULATOR1-8A12-4F4F-8F69-6B8F3C2E78DD",
+    "confluent.topic.bootstrap.servers": "localhost:9092",
+    "confluent.topic.replication.factor": "1",
+    "confluent.license":""
+    }
+}'
+curl -s -X POST -H 'Content-Type: application/json' http://localhost:8083/connectors -d '{
+    "name" : "mqtt-source",
+"config" : {
+    "connector.class" : "io.confluent.connect.mqtt.MqttSourceConnector",
+    "tasks.max" : "1",
+    "mqtt.server.uri" : "tcp://127.0.0.1:1883",
+    "mqtt.topics" : "SIMULATOR1-8A12-4F4F-8F69-6B8F3C2E78DD",
+    "kafka.topic" : "mqtt.SIMULATOR1-8A12-4F4F-8F69-6B8F3C2E78DD",
+    "confluent.topic.bootstrap.servers": "localhost:9092",
+    "confluent.topic.replication.factor": "1",
+    "confluent.license":""
+    }
+}'
+
+kafka-topics --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic mqtt.SIMULATOR1-8A12-4F4F-8F69-6B8F3C2E78DD
+
+kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic mqtt.SIMULATOR1-8A12-4F4F-8F69-6B8F3C2E78DD --property print.key=true --from-beginning
+
+
+#start and stop mqtt
+sudo service mosquitto start 
+sudo service  mosquitto stop
+
+mosquitto_sub -h 127.0.0.1 -t SIMULATOR1-8A12-4F4F-8F69-6B8F3C2E78DD
+
+mosquitto_pub -h 127.0.0.1 -p 1883 -t SIMULATOR1-8A12-4F4F-8F69-6B8F3C2E78DD -q 2 -m "mendel ist geil"
+
+
+// Restart Kafka Connect worker
+confluent local stop connect
+confluent local start connect
+
+confluent local destroy
+// Confluent CLI
+confluent local status connectors
+confluent local status mqtt-source
+
+
+kill -9 <PID>
+
+nohup bin/zookeeper-server-start.sh config/zookeeper.properties &
+
+nohup bin/kafka-server-start.sh config/server.properties &
+

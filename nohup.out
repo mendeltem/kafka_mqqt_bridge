@@ -1,0 +1,35 @@
+[12398:12398:0112/140949.515242:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[12398:12398:0112/140949.520565:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[12398:12398:0112/140949.524060:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[12398:12398:0112/140950.648354:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/143404.067623:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6772:6772:0112/143404.085061:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6772:6772:0112/143404.085964:ERROR:zygote_communication_linux.cc(292)] Failed to send GetTerminationStatus message to zygote
+[6772:6772:0112/145708.905172:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/145710.217956:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/150127.544191:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/150128.701253:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/150346.827250:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/150348.066844:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151009.534599:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151010.677949:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151024.673342:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151025.876820:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151508.505343:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151509.653557:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151546.951089:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151548.103345:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151617.106146:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/151618.291368:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/152139.575835:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/152140.711520:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/152151.464582:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/152152.658149:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/152551.920837:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/152553.068815:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/154150.638189:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+[6772:6772:0112/154151.817077:ERROR:child_process_launcher.cc(522)] Failed to launch child process
+The X11 connection broke (error 1). Did the X11 server die?
+The X11 connection broke: I/O error (code 1)
+XIO:  fatal IO error 25 (Inappropriate ioctl for device) on X server ":0"
+      after 222898 requests (222898 known processed) with 0 events remaining.
