@@ -1,1 +1,1 @@
-# kafka_mqqt_bridge
+# kafka_mqtt_connector
